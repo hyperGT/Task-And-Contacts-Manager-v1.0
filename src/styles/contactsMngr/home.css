@@ -1,0 +1,135 @@
+body{
+    background-color: #DA70D6;
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens */
+    gap: 20px; /* Espaçamento entre o formulário e a lista de contatos */
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o layout na tela */
+    padding: 20px;
+}
+
+/* Estilo do Formulário */
+.form-container {
+    flex: 0 0 500px; /* Definindo a largura fixa do formulário */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de Contatos */
+.contacts-list {
+    flex: 1; /* Ocupa o espaço restante */
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contacts-list h2 {
+    margin-bottom: 10px;
+}
+
+ul#contacts {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul#contacts li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+/*
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+input, textarea, button[type="submit"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os itens em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .contacts-list {
+        width: 100%;
+        max-width: 500px;
+    }
+}

@@ -1,0 +1,24 @@
+
+#opt{
+    background-color: rgb(189, 187, 187);
+    margin: 40px;    
+    height: 450px;
+    display: flex;
+    flex-direction: column;    
+    gap: 40px;  
+    align-items: center;   
+    padding: 50px;    
+}
+
+.links{
+    height: fit-content;
+    padding: 10px 30px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 30px;
+}
+
+a:hover{
+    opacity: 0.8; /* Cor de texto ao passar o mouse */
+}

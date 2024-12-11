@@ -1,0 +1,97 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remover estilos padrão em listas */
+ul, ol {
+    list-style: none;
+}
+
+/* Remover estilos padrão em links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    opacity: 0.8; /* Cor de texto ao passar o mouse */
+}
+
+/* Garantir estilos consistentes em botões */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+button:hover{
+    background-color: #252525; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Ajustar fontes e suavizar texto */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Escolha uma fonte padrão */
+    line-height: 1.5;
+    color: #333; /* Cor de texto legível */
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Garantir estilo consistente para imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ajustar inputs, selects e textareas */
+input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    border: none;
+    outline: none;
+}
+
+/* Definir bordas consistentes */
+fieldset {
+    border: none;
+}
+
+/* Remover estilos padrão de tabelas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+/* Garantir que elementos de mídia ocupem seu contêiner */
+video, audio {
+    max-width: 100%;
+    height: auto;
+}
+
+
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 2em;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

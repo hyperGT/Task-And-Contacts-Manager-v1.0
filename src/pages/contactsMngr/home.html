@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/default.css">
+    <link rel="stylesheet" href="../../styles/contactsMngr/home.css">
+    <title>Contacts Manager</title>
+</head>
+<body>
+    
+    <header>
+
+        <h1>Contacts Manager</h1>
+
+        <button id="login" onclick="">Login/Criar Conta</button>
+    </header>
+
+    <div class="container">
+
+        <!--Formulário para adicionar novos contatos -->
+        <div class="form-container">
+            <form id="contactsForm" action="">
+                <fieldset>
+                    <legend>New Contact</legend>
+        
+                    <!-- Identificação -->
+                    <input type="hidden" name="id" id="id">
+        
+                    <!-- Informações Básicas -->
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" name="name" id="name" placeholder="Digite o nome" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="(XX) XXXXX-XXXX" required>
+                    </div>
+        
+                    <!-- Endereço -->
+                    <div class="form-group">
+                        <label for="address">Endereço:</label>
+                        <input type="text" name="address" id="address" placeholder="Digite o endereço" required>
+                    </div>
+        
+                    <!-- Informações Adicionais -->
+                    <div class="form-group">
+                        <label for="birthday">Data de Nascimento:</label>
+                        <input type="date" name="birthday" id="birthday">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="notes">Notas:</label>
+                        <textarea name="notes" id="notes" cols="30" rows="5" placeholder="Informações adicionais"></textarea>
+                    </div>
+        
+                    <!-- Favorito -->
+                    <div class="form-group form-check">
+                        <br>
+                        <input type="checkbox" name="favorite" id="favorite">
+                        <label for="favorite">Favorito</label>
+                        <br>
+                    </div>
+        
+                    <!-- Botão de envio -->
+                    <div class="form-group">
+                        <button type="submit" name="add-btn" onclick="enviarContato();">Adicionar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <!--Lista de contatos-->
+        <!-- Lista de Contatos -->
+    <div class="contacts-list">
+        <h2>Lista de Contatos</h2>
+        <ul id="contacts">
+            <li>João Silva - exemplo@email.com</li>
+            <li>Ana Costa - ana@email.com</li>
+            <li>Marcos Pereira - marcos@email.com</li>
+        </ul>
+    </div>
+    </div>
+    
+
+    </div>
+</body>
+</html>
