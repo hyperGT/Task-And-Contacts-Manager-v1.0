@@ -41,7 +41,6 @@ body {
     font-family: Arial, sans-serif; /* Escolha uma fonte padrão */
     line-height: 1.5;
     color: #333; /* Cor de texto legível */
-    background-color: #f9f9f9; /* Cor de fundo clara */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -65,6 +64,7 @@ input, select, textarea {
 /* Definir bordas consistentes */
 fieldset {
     border: none;
+    padding: 0;
 }
 
 /* Remover estilos padrão de tabelas */

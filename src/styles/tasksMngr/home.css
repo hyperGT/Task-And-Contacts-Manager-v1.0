@@ -1,0 +1,110 @@
+body{
+    background-color: #1E90FF;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-container{
+
+    flex: 0 0 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#defPrioridades legend{
+    font-size: medium;
+    font-weight: 600;    
+}
+
+#defPrioridades{
+    margin-bottom: 10px;
+}
+
+#defPrioridades input{
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+input, textarea, button[type="submit"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+
+textarea {
+    resize: none;
+}
+
+button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os itens em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .tasks-list {
+        width: 100%;
+        max-width: 500px;
+    }
+}
