@@ -20,10 +20,10 @@ switch($action){
         $endereco = $_POST['address'];
         $data_aniversario = $_POST['birthday'];
         $notas = $_POST['notes'];
-        $isFavorito = isset($_POST['favorite']) ? 1 : 0;
+        $favorito = isset($_POST['favorite']) ? 1 : 0;
 
-        $sql = $conn->prepare('INSERT INTO contatos (nome, email, telefone, endereco, data_aniversario, notas, isFavorito) VALUES (?, ?, ?, ?, ?, ?, ?)');
-        $sql->bind_param('sssssi', $nome, $email, $telefone, $endereco, $data_aniversario, $notas, $isFavorito);
+        $sql = $conn->prepare('INSERT INTO contatos (nome, telefone, email, endereco, data_aniversario, favorito, notas) VALUES (?, ?, ?, ?, ?, ?, ?)');
+        $sql->bind_param('ssssis', $nome, $telefone, $email, $endereco, $data_aniversario, $favorito, $notas);
         
         $sql->close();
         
