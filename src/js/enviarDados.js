@@ -1,4 +1,5 @@
-function enviarContato(event){
+async function enviarContato(event){
+    
     event.preventDefault();
 
     const form = document.querySelector("#contactsForm");
@@ -8,7 +9,7 @@ function enviarContato(event){
       alert("Todos os campos são obrigatórios!");
       form.reportValidity();    // exibe mensagens de erro específicas para os campos inválidos
       return;
-    } 
+    }
 
     // Cria um objeto FormData com os dados do formulário
     const formData = new FormData(form);
@@ -21,15 +22,29 @@ function enviarContato(event){
     console.log("Dados do formulário:", data);
 
     // Envia os dados pro back
-    fetch('../php/crud_contatos.php&action=create', {
-        method: "POST",
-        body: formData
-    })
-    .then((data) => {        
-        console.log(data);
-        alert("Contato enviado com sucesso!");        
-    }).catch((err) => {
-        alert("Ocorreu um erro ao enviar o formulário.");
-    });
+    try{
 
+        // Envia os dados pro back e guarda a resposta
+        const response = await fetch('../php/crud_contatos.php&action=create', {
+            method: "POST",
+            body: formData
+        });
+
+        // Verifica se a resposta foi bem-sucedida
+        if(!response.ok){
+            throw new Error(`Erro na requisição: ${response.statusText}`);
+        }
+    } catch(error){
+
+        // Mostra a mensagem de erro no console
+        console.error("Erro ao enviar o formulário: ", error);
+        alert("Ocorreu um erro ao enviar o formulário.");
+    }
+}
+
+async function cadastrarTarefa(event) {
+
+    event.preventDefault();
+
+    const form = document.querySelector("#taskForm");
 }
