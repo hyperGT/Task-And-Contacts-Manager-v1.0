@@ -23,8 +23,7 @@ async function enviarContato(event){
 
     // Envia os dados pro back
     try{
-
-        // Envia os dados pro back e guarda a resposta
+        
         const response = await fetch('../php/crud_contatos.php&action=create', {
             method: "POST",
             body: formData
