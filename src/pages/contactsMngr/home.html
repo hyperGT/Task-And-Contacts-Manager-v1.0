@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/default.css">
     <link rel="stylesheet" href="../../styles/contactsMngr/home.css">
+    <script src="../../js/enviarDados.js"></script>
     <title>Contacts Manager</title>
 </head>
 <body>
@@ -32,21 +33,23 @@
                         <label for="name">Nome:</label>
                         <input type="text" name="name" id="name" placeholder="Digite o nome" required>
                     </div>
-        
-                    <div class="form-group">
-                        <label for="email">E-mail:</label>
-                        <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
-                    </div>
                     
+                    <!--Telefone-->
                     <div class="form-group">
                         <label for="phone">Telefone:</label>
                         <input type="tel" name="phone" id="phone" placeholder="(XX) XXXXX-XXXX" required>
                     </div>
                     
+                    <!-- E-mail -->
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" placeholder="exemplo@email.com">
+                    </div>
+                    
                     <!-- Endereço -->
                     <div class="form-group">
                         <label for="address">Endereço:</label>
-                        <input type="text" name="address" id="address" placeholder="Digite o endereço" required>
+                        <input type="text" name="address" id="address" placeholder="Digite o endereço">
                     </div>
                     
                     <!-- Informações Adicionais -->
@@ -70,7 +73,7 @@
         
                     <!-- Botão de envio -->
                     <div class="form-group">
-                        <button type="submit" name="add-btn" onclick="enviarContato();">Adicionar</button>
+                        <button type="submit" name="add-btn" onclick="enviarContato(event);">Adicionar</button>
                     </div>
                 </fieldset>
             </form>
