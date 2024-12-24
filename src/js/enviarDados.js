@@ -1,3 +1,5 @@
+import "carregarDados.js";
+
 async function enviarContato(event){
     
     event.preventDefault();
@@ -17,9 +19,16 @@ async function enviarContato(event){
             method: 'POST',
             body: formData,
         });
+
+        if(!response.ok){
+            throw new Error('Erro na requisição. Status:', response.status);
+        }
         
         const result = await response.json();
-        console.log('Resultado da requisição:', result);      
+        console.log('Resultado da requisição:', result);
+
+        // Limpa o formulário
+        form.reset();                
 
     } catch(error){
 

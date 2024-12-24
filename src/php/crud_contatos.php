@@ -68,10 +68,24 @@ try{
                     'message' => 'Ocorreu um erro ao tentar criar o contato.'
                 ]);
             }            
-            
-
-
+        
             break;
+
+        case 'read': 
+
+            $resultado = $conn->query("SELECT * FROM contatos");   // guarda todos os itens da tabela do banco de dados 
+            $contatos = []; 
+
+            while($row = $resultado->fetch_assoc()){
+                $contatos[] = $row;
+            }
+            
+            echo json_encode([
+                'status' => 'success',
+                'data' => $contatos
+            ]);
+            break;
+
         default: 
             echo json_encode([
                 'status' => 'error',
