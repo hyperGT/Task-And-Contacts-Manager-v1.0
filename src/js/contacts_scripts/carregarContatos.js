@@ -1,6 +1,4 @@
-
-
-async function carregarContatos() {
+export async function carregarContatos() {
     
     const url = "../../php/crud_contatos.php?action=read";
 
