@@ -23,8 +23,7 @@ export async function carregarContatos() {
                 const li = document.createElement("li");
                 li.innerHTML = `
                     ${contato.nome} - ${contato.telefone}
-                    <button onclick="editarContato(${contato.id})">Editar</button>
-                    <button onclick="apagarContato(${contato.id})">Apagar</button>
+                    <button id="editCt" onclick="editarContato(${contato.id})">Editar</button><button id="delCt" onclick="apagarContato(${contato.id})">Apagar</button>
                 `;
                 lista.appendChild(li);
             });

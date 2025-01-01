@@ -45,6 +45,29 @@ ul#contacts li {
     border-bottom: 1px solid #ccc;
 }
 
+/*Botão de editar contatos*/
+ul#contacts #editCt{
+    background-color: none;
+    color:cornflowerblue;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*Botão de deletar contatos*/
+
+ul#contacts #delCt{
+    background-color: none;
+    color: red;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+ul#contacts button:hover{
+    background-color: #ccc;
+}
+
 form {
     display: flex;
     flex-direction: column;

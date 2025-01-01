@@ -85,6 +85,36 @@ try{
                 'data' => $contatos
             ]);
             break;
+        
+        case 'get':
+            
+            if(isset($_GET['id'])){
+
+                $id = intval($_GET['id']);
+
+                $sql = $conn->prepare("SELECT * FROM contatos WHERE id = ?");
+                $sql->bind_param('i', $id);
+                $sql->execute();
+
+                $result = $sql->get_result();
+
+                if($result->num_rows > 0){
+                    $contato = $result->fetch_assoc();
+                    echo json_encode([
+                        'status' => 'success',
+                         'data' => $contato
+                    ]);
+                }else{
+                    echo json_encode([
+                        'status' => 'error',
+                         'message' => 'Contato não encontrado'
+                    ]);
+                }
+            }
+            
+            $sql->close();
+            
+            break;
 
         default: 
             echo json_encode([
