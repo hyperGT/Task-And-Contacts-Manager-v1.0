@@ -116,6 +116,12 @@ try{
             
             break;
 
+        case 'update':
+
+            
+
+            break;
+
         default: 
             echo json_encode([
                 'status' => 'error',
